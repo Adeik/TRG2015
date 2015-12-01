@@ -139,3 +139,6 @@ pythontex-files-*/
 # WinEdt
 *.bak
 *.sav
+
+# El .pdf del trabajo
+Trabajo.pdf
