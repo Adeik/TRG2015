@@ -9,6 +9,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[plainpages=false,pdfpagelabels,hypertexnames=false,hidelinks]{hyperref}
 \graphicspath{{./Img/}}
+\captionsetup{width=0.7\linewidth}
 
 \makeatletter
 \DeclareMathSizes{\@xpt}{\@xpt}{6}{5}
@@ -136,7 +137,30 @@ En este momento, resulta más adecuado para los fines del trabajo abandonar la p
 %
 %
 \newpage
-\section{Aproximaciones canónicas.} % Tú o yo
+\section{Aproximaciones canónicas.} % Iyán
+
+Como ya se comentó un poco en la introducción, una de las características más curiosas de la relatividad general es que el espacio-tiempo, el <<soporte>> en el que tienen lugar todos los sucesos físicos, deja de ser un mero fondo fijo, y pasa a tener una dinámica propia. A diferencia de lo que ocurría en la imagen newtoniana, en la teoría de Einstein la interacción entre materia y espacio-tiempo es recíproca. Hay que matizar que cuando se dice que el espacio-tiempo es dinámico, no nos referimos a que cambie con respecto a algún tiempo externo, de hecho el tiempo no es externo a este soporte sino que se encuentra embebido en él.
+
+El problema es que las ecuaciones de Einstein no describen ningún tipo de evolución ya que el tiempo está incluido en esta estructura del espacio-tiempo, así que si queremos plantear un problema de valor inicial es necesario reintroducir de nuevo una noción de tiempo respecto a la cual podamos hablar de evolución temporal. Esto se consigue introduciendo una estructura que de alguna forma nos permite separar el espacio-tiempo en espacio y tiempo.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\textwidth]{FoilM.png}
+\caption{Separación de la variedad $M$ mediante una familia, de un único parámetro, de encajes $\varepsilon_t$ de 3-variedades $\Sigma$ en $M$. $\Sigma_t$ es la imagen en $M$ de $\Sigma$ bajo $\varepsilon_t$.}
+\label{fig:FoilM}
+\end{figure}
+
+
+Supongamos que tenemos una estructura de espacio-tiempo, es decir, una variedad diferenciable $M$ de dimensión cuatro y métrica $g_{\mu\nu}$ que se puede <<separar>> mediante una familia $\{\Sigma_t\,|\,t\in\mathbb{R}\}$ de hojas espaciales (hipersuperficies espaciales). Es decir, que para número $t$ existe un <<encaje>> (\emph{embedding}) de una variedad fija $\Sigma$ de dimensión tres en $M$
+
+\begin{equation*}
+ \varepsilon_t\,:\,\Sigma\rightarrow M\,,
+\end{equation*}
+cuya imagen $\varepsilon_t(\Sigma)\subset M$ es $\Sigma_t$, una subvariedad de la variedad $M$. En la figura (\ref{fig:FoilM}) se muestra este procedimiento. Cada hoja tridimensional $\Sigma_t$ se corresponde con un instante de tiempo $t$, donde $t$ es un <<tiempo>> topológico, una forma de etiquetar los instantes de forma continua pero que no tiene nada que ver con el tiempo de los relojes.
+
+Gracias a este mecanismo hemos logrado recuperar la noción de tiempo: podemos ver el espacio-tiempo ($M,g$) como una familia de espacios parametrizada por un único parámetro $t$. De esta forma, el espacio-tiempo se interpreta como una <<trayectoria de espacios>>.
+
+
 \subsection{\textit{Quantum Geometrodynamics.}}
 
 \subsection{Gravedad cuántica de bucles (\textit{Loop Quantum Gravity}).}
