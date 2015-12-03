@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=0.9in]{geometry}
-\usepackage{amsmath,amsfonts,graphicx,float,booktabs,url,siunitx}
+\usepackage{amsmath,amsfonts,graphicx,float,booktabs,url,siunitx,mathrsfs,tensor}
 \usepackage[font=footnotesize,labelfont={sf,bf},textfont=sf]{caption}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[plainpages=false,pdfpagelabels,hypertexnames=false,hidelinks]{hyperref}
@@ -157,7 +157,7 @@ Volvamos ahora con la teoría gravitatoria. El problema con el que se encontraro
 %
 %
 \newpage
-\section{Aproximaciones canónicas.} % Iyán
+\section{Aproximaciones canónicas} % Iyán
 
 Como ya se comentó un poco en la introducción, una de las características más curiosas de la relatividad general es que el espacio-tiempo, el <<soporte>> en el que tienen lugar todos los sucesos físicos, deja de ser un mero fondo fijo, y pasa a tener una dinámica propia. A diferencia de lo que ocurría en la imagen newtoniana, en la teoría de Einstein la interacción entre materia y espacio-tiempo es recíproca. Hay que matizar que cuando se dice que el espacio-tiempo es dinámico, no nos referimos a que cambie con respecto a algún tiempo externo, de hecho el tiempo no es externo a este soporte sino que se encuentra embebido en él.
 
@@ -171,19 +171,45 @@ El problema es que las ecuaciones de Einstein no describen ningún tipo de evolu
 \end{figure}
 
 
-Supongamos que tenemos una estructura de espacio-tiempo, es decir, una variedad diferenciable $M$ de dimensión cuatro y métrica $g_{\mu\nu}$ que se puede <<separar>> mediante una familia $\{\Sigma_t\,|\,t\in\mathbb{R}\}$ de hojas espaciales (hipersuperficies espaciales). Es decir, que para número $t$ existe un <<encaje>> (\emph{embedding}) de una variedad fija $\Sigma$ de dimensión tres en $M$
-
+Supongamos que tenemos una estructura de espacio-tiempo, es decir, una variedad diferenciable $M$ de dimensión cuatro y métrica $g_{\mu\nu}$ que se puede <<separar>> mediante una familia $\{\Sigma_t\,|\,t\in\mathbb{R}\}$ de hojas espaciales (hipersuperficies espaciales). Es decir, que para número $t$ existe un <<encaje>> (\emph{embedding}) de una variedad fija $\Sigma$ de imensión tres en $M$
 \begin{equation*}
  \varepsilon_t\,:\,\Sigma\rightarrow M\,,
 \end{equation*}
 cuya imagen $\varepsilon_t(\Sigma)\subset M$ es $\Sigma_t$, una subvariedad de la variedad $M$. En la figura (\ref{fig:FoilM}) se muestra este procedimiento. Cada hoja tridimensional $\Sigma_t$ se corresponde con un instante de tiempo $t$, donde $t$ es un <<tiempo>> topológico, una forma de etiquetar los instantes de forma continua pero que no tiene nada que ver con el tiempo de los relojes.
 
-Gracias a este mecanismo hemos logrado recuperar la noción de tiempo: podemos ver el espacio-tiempo ($M,g$) como una familia de espacios parametrizada por un único parámetro $t$. De esta forma, el espacio-tiempo se interpreta como una <<trayectoria de espacios>>.
+Gracias a este mecanismo hemos logrado recuperar la noción de tiempo: podemos ver el espacio-tiempo ($M,g$) como una familia de espacios parametrizada por un único parámetro $t$. De esta forma, el espacio-tiempo se interpreta como una <<trayectoria de espacios>> tridimensionales. La ecuaciones de Einstein que vimos en clase
+\begin{equation*}
+ G_{\mu\nu}=-8\pi GT_{\mu\nu}
+\end{equation*}
+en las que no se podía plantear un problema de valor inicial quedarían reformuladas en forma de una ecuación de evolución en la que dada la geometría de una hipersuperficie (valor inicial) podríamos determinar cómo evolucina esta geometría a lo largo del <<tiempo>>.
+
+Esta forma de plantear el problema induce unas ligaduras conectadas con las invariancias de la teoría. De esta forma, uno tiene cuatro ligaduras locales asociadas con los difeomorfismos\footnote{Un difeomorfismo \cite{difeomorfismo} es un mapeo entre variedades, que es diferenciable y tiene un inverso también diferenciable.} clásicos: una es la ligadura del Hamiltoniano $\mathscr{H}_\perp$, la cual genera deformaciones en las hipersuperficies; las tres restantes serían las ligaduras del momento o las ligaduras $\mathscr{H}_a$, las cuales generan transformaciones de las coordenadas tridimensionales. En clase sólo hemos trabajado con la conexión de Levi-Civita, pero en realidad ni siquiera estamos limitado a trabajar con variedades Riemannianas. Una teoría muy usada en física teórica es la teoría de las tétradas o \emph{vielbeins}, que es un caso especial de aplicación de la conexión de Cartan en variedades cuadridimensionales. En esta situación surgirían tres ligaduras adicionales, que reciben el nombre de ligaduras de Gauss, y que estarían asociadas con la libertad de realizar transformaciones de Lorentz locales.
+
+Mediante la cuantización, estas ligaduras clásicas se transforman en ligaduras cuánticas para las funciones de onda válidas. La forma exacta depende de cómo escojamos nuestras variables canónicas. Esto da lugar a la dos ramas dentro de los intentos canónicos de cuantizar la gravedad: la geometrodinámica y la gravedad cuántica de bucles.
 
 
-\subsection{\textit{Quantum Geometrodynamics.}}
+\subsection{\textit{Quantum Geometrodynamics}}
 
-\subsection{Gravedad cuántica de bucles (\textit{Loop Quantum Gravity}).}
+\textit{Quantum Geometrodynamics}, gravedad cuántica geometrodinámica o, simplemente, geometrodinámica es una de las formas en las que se ha intentado cuantizar la gravedad, una teoría introducida por Arnowitt, Deser y Misner en los años 60, y también muy promovida por John Wheeler.
+
+En geometrodinámica, las variables canónicas son la métrica $g_{\mu\nu}$ y sus momentos canónicamente conjugados $\pi^{\sigma\tau}$. Estas variables se convierten en operadores de forma análoga a cómo lo hacen los operadores posición y momento habituales usando las reglas de conmutación
+
+\begin{equation*}
+ \Big[\hat{g}_{\mu\nu}(x),\hat{\pi}^{\sigma\tau}\Big]=i\hbar\,\tensor{\delta}{^\sigma}{_\mu}\tensor{\delta}{^\tau}{_\nu}\delta(x,y)
+\end{equation*}
+
+Usando un procedimiento sugerido por primera vez por Dirac, las ligaduras clasicas se implementan como ligaduras cuánticas, como dijimos antes, en las funciones de onda
+
+\begin{align*}
+ \mathscr{H}_\perp\Psi&=0\\
+ \mathscr{H}_a\Psi&=0
+\end{align*}
+
+La primera ecuación se conoce como la ecuación de Wheeler-DeWitt y las otras tres simplemente se llaman ligaduras del momento cuántico.
+
+
+
+\subsection{Gravedad cuántica de bucles (\textit{Loop Quantum Gravity})}
 
 %
 %
