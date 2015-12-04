@@ -330,7 +330,23 @@ La cosmología cuántica es la aplicación de las teorías cuánticas de la grav
 
 Hay muchas formulaciones de la cosmología cuántica, en principio tantas como formulaciones de la gravedad cuántica haya, y por eso se puede encontrar gente que dedica su tiempo a cosmología cuántica supersimétrica, cosmología cuántica de bucles, \emph{string quantum cosmology}, cosmología cuántica no conmutativa, etc. La mayor parte de las versiones de cosmología cuántica toman como punto de partida clásico la relatividad general de Einstein.
 
-En este apartado sólo queremos mostrar una idea global sin decantarnos por ninguna rama en particular. La cosmología cuántica normalmente se plantea para modelos homogéneos y en la formulación más sencilla también se asume la isotropía.
+En este apartado sólo queremos mostrar una idea global sin decantarnos por ninguna rama en particular. La cosmología cuántica normalmente se plantea para modelos homogéneos y en la formulación más sencilla también se asume la isotropía. En una configuración en la que que se tiene en cuenta la presencia de materia, se añade un campo escalar $\phi$ con un potencial $V(\phi)$ y la ecuación de Wheeler-DeWitt se convierte en una ecuación de derivadas parciales bidimensional
+
+\begin{equation*}
+ \Bigg[\frac{\hbar^2\kappa^2}{2}a\frac{\partial}{\partial a}a\frac{\partial }{\partial a}-\frac{\hbar^2}{2}\frac{\partial^2}{\partial\phi^2}+a^6\Big(V(\phi)+\frac{\Lambda}{\kappa^2}\Big)-\frac{3ka^4}{\kappa^2}\Bigg]\Psi(a,\phi)=0
+\end{equation*}
+
+donde $\kappa\equiv8\pi G$, $a$ viene del elemento diferencial $ds^2=-N(t)^2dt^2+a(t)^2d\Omega_3^2$, $k$ sería el índice de curvatura espacial ($k=0,\pm1$) y $\Lambda$ la constante cosmológica. Se puede definir una nueva variable $\alpha\equiv\ln a$ y reescribir la ecuación anterior con la ventaja de que la nueva variable tiene un rango desde $-\infty$ a $+\infty$.
+
+\begin{equation*}
+ \Bigg[\frac{\hbar^2\kappa^2}{12}\frac{\partial^2}{\partial\alpha^2}+\frac{\hbar^2}{2}\frac{\partial^2}{\partial\phi^2}+e^{6\alpha}\Big(V(\phi)+\frac{\Lambda}{\kappa^2}\Big)-3e^{4\alpha}\frac{k}{\kappa^2}\Bigg]\Psi(\alpha,\phi)=0
+\end{equation*}
+
+En el caso de cosmología cuántica por bucles, la ecuación que se plantean difiere de esta última pero a escalas más alla de la longitud de Planck las diferencias entre ambas ecuaciones desaparecen. En cualquier caso, en ambos planteamientos, las ecuaciones diferenciales son difíciles de resolver así que al final se recurre a teorías efectivas. Muchas de las características que presenta la cosmología cuántica se estudian en el límite cuando la ecuación de Wheeler-DeWitt toma la forma WKB\footnote{La aproximación o método WKB (por las iniciales de Wentzel, Kramers y Brillouin) es un método para encontrar soluciones aproximadas a ecuaciones diferenciales lineales con coeficientes espaciales variables. Es un método habitualmente usado para cálculos semiclásicos en mecánica cuántica en la que la función de onda se escribe como una función exponencial, se exande semiclásicamente, y luego se varía lentamente o bien la amplitud o bien la fase.}. Incluso se ha llegado a plantear que la función de onda del universo sólo puede ser interpretada en el límite WKB porque sólo en esos casos aparece el parámetro tiempo y una ecuación similar a la de Schrödinger. Además de que conceptualmente esto conlleva muchas dudas y, por tanto, el mayor número posible de implicaciones del significado de las funciones de onda en cosmología cuántica se deberían derivar de las soluciones exactas y no de esta aproximación, el límite WKB falla en muchas situaciones interesantes.
+
+
+
+
 %
 %
 %
