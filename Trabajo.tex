@@ -100,7 +100,7 @@ Quiere ser la historia irónica, y el hecho es que a Dirac las nuevas teorías d
 
 En los últimos años de su vida, Dirac acabó aislado de la comunidad científica por su negativa a aceptar los logros de la física cuántica. No cesó de instigar a sus compañeros a buscar una teoría más general que no necesitara de las \textit{abyectas} renormalizaciones. Tampoco le sorprendió nada que DeWitt, eventualmente hallara problemas de renormalización en su cuantización de la gravedad. Dirac creía que para unificar ambos mundos sería necesaria una comprensión más profunda de la teoría cuántica.
 
-DeWitt, mientras, se dedicó a intentar cuantizar el gravitón, que sería la partícula que «transportaría» (mediaría) la interacción gravitatoria: empresa más ardua de las que nunca imaginara, y que ya habían intentado otros como Matvei Bronstein, el propio Paul Dirac, Richard Feynmann, Wolfgang Pauli o Werner Heisenberg. Los esfuerzos que él y otros a la par como Dennis Sciama (Óxford), Stanley Deser (Boston) o Abdus Salam (Paquistán) estaban llevando a cabo se pusieron en común en 1974, cuando se realizó un simposio sobre gravedad cuántica en la Universidad de Óxford.
+DeWitt, mientras, se dedicó a intentar cuantizar el gravitón, que sería la partícula que «transportaría» (mediaría) la interacción gravitatoria: empresa más ardua de las que nunca imaginara, y que ya habían intentado otros como Matvei Bronstein, el propio Paul Dirac, Richard Feynman, Wolfgang Pauli o Werner Heisenberg. Los esfuerzos que él y otros a la par como Dennis Sciama (Óxford), Stanley Deser (Boston) o Abdus Salam (Paquistán) estaban llevando a cabo se pusieron en común en 1974, cuando se realizó un simposio sobre gravedad cuántica en la Universidad de Óxford.
 
 Aunque la comunidad científica vivía una relativa euforia (el ya existente CERN no paraba de confirmar los resultados que el modelo estándar de física de partículas predecía), según fueron pasando los ponentes ese clima de éxtasis se fue esfumando. De acuerdo con Wolfgang Pauli, se podía escuchar cómo los organizadores del evento murmuraban inquietos: «lo que Dios ha separado, que no lo una el hombre»\footnote{\cite[p.~242]{teoriaperfecta}.}.
 
@@ -172,8 +172,42 @@ Volvamos ahora con la teoría gravitatoria. El problema con el que se encontraro
 %
 %
 \newpage
-\section{Gravedad cuántica covariante.} % Tú o yo
+\section{Gravedad cuántica covariante.}
 
+Cuando se habla de gravedad cuántica covariante uno se refiere a intentos de cuantizar la gravedad empleando métodos que hacen uso de la covarianza cuadridimensional. Hoy en día, salvo en la gravedad cuántica de bucles covariante, hay muchos más físicos trabajando en teorías canónicas o teoría de cuerdas que en estos métodos covariantes.
+
+La base de estos métodos es la integral de camino cuántica, que se escribiría así
+
+\begin{equation*}
+ Z[g]=\int\mathscr{D}g_{\mu\nu}(x)e^{iS[g_{\mu\nu}(x)]}
+\end{equation*}
+
+Hay que tener especial cuidado con el tratamiento de la medida en la integral anterior. Para que esté bien definida, hay que aplicar el procedimiento de Faddeev-Popov \cite{popov} empleado en teorías de gauge, que trataremos de explicar brevemente a continuación.
+
+A la integral de camino empleada en teoría cuántica de campos se le exige que produzca soluciones inequívocas y no singulares. Esto no es posible cuando hay presente una simetría gauge ya que no existe un procedimiento que seleccione una única solución dentro de una familia de soluciones físicamente equivalentes, todas ellas relacionadas por una transformación gauge, que representan un mismo estado físico. La medida de la integral de camino contiene un factor que no permite obtener varios resultados usando la acción original mediante métodos habituales como diagramas de Feynman. Sin embargo, es posible modificar esta acción añadiendo unos campos adicionales (\emph{ghost fields}) que rompen la simetría guage y permite seguir usando los métodos habituales de resolución. Esta técnica es la que se conoce como procedimiento de Faddeev-Popov.
+
+Una aplicación de la integral de camino cuántica es la derivación de las reglas de Feynman para la teoría de perturbaciones. Uno hace el siguiente \emph{ansatz}
+
+\begin{equation*}
+ g_{\mu\nu}=\bar{g}_{\mu\nu}+\sqrt{32\pi G}f_{\mu\nu}\,,
+\end{equation*}
+donde $\bar{g}_{\mu\nu}$ representa la métrica clásica y $f_{\mu\nu}$ sería la cuantización del campo (los gravitones de spin 2), con respecto a la cual se aplica la teoría de perturbaciones.
+
+A pesar de las similitudes que presenta esta teoría para cuantizar la gravedad con el modelo estandar, hay una diferencia fundamental: \textbf{la teoría es no renormalizable}. Es decir, esto significa que en cada orden que obtenemos mediante la teoría de perturbaciones, aparece un nuevo tipo de divergencia, y al final nos encontramos con que tenemos un número infinito de parámetros libres. Por ejemplo, para un desarrollo de dos \emph{loops} uno se encuentra la siguiente divergencia en el lagrangiano
+
+\begin{equation*}
+ \mathscr{L}_\text{2-loop}=\frac{209\hbar^2}{2880}\frac{32\pi G}{(16\pi^2)^2\epsilon}\sqrt{\bar{g}}\bar{R}^{\alpha\beta}_{\gamma\delta}\bar{R}^{\gamma\delta}_{\mu\nu}\bar{R}^{\mu\nu}_{\alpha\beta}\,,
+\end{equation*}
+donde $\epsilon=4-D$ con $D$ el número de dimensiones del espacio-tiempo. En las últimas investigaciones llevas a cabo \cite{bern} se ha logrado encontrar una gravedad cuántica covariante renormalizable y finita (supergravedad) con cuatro \emph{loops}. Esto es un indicio de que podría haber una simetría desconocida responsable de que la teoría sea finita, aunque por el momento ni se sabe si efectivamente existe ni mucho menos cuál es su naturaleza.
+
+Olvidándonos del problema de la no renormalizabilidad de la teoría, uno puede hacer física y estudiar la gravedad cuántica covariante desde un punto de vista efectivo (hablaremos algo más en un apartado), truncando el desarrollo, por ejemplo, a orden de un \emph{loop}. Uno no aspira a una teoría fundamental haciendo esto pero sí que se pueden hacer predicciones concretas porque el problema de los parámetros libres infinitos desaparece. Por ejemplo, uno puede plantear una correccción cuántica al potencial newtoniano entre dos masas. Este potencial a un \emph{loop} queda así
+
+\begin{equation*}
+ V(r)=-\frac{Gm_1m_2}{r}\Bigg[1+3G\,\frac{m_1+m_2}{rc^2}+\frac{41}{10\pi}\frac{G\hbar}{r^2c^3}+\mathcal{O}(G^2)\Bigg]\,,
+\end{equation*}
+donde el primer término sería el potencial clásico y sólo el segundo término sería realmente la auténtica corrección cuántica. Sin embargo, debido a al $c^2$ que aparece en el denominador, la corrección es tan pequeña que no se puede medir.
+
+Además de la teoría de perturbaciones, expresiones similares a la que mostramos al principio de la integral de camino se pueden definir y evaluar (en espacio-tiempos de cuatro dimensiones o incluso mayores) mediante métodos numéricos. Un ejemplo de estos métodos sería la triangulación dinámica causal, en inglés \emph{Causal Dynamical Triangulation} (CDT), que se basaría en dividir el espacio-tiempo en símplex, una generalización del triángulo a dimensiones arbitrarias, que jugaría el papel de <<celda unidad>> del espacio-tiempo. La evolución del espacio-tiempo constituido por estos símplex se simularía mediante métodos de Monte Carlo teniendo en cuenta las fluctuaciones cuánticas de sus constituyentes.
 %
 %
 %
